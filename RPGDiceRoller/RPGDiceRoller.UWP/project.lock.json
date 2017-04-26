@@ -268,6 +268,15 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Refractored.MvvmHelpers/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -2160,6 +2169,15 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Refractored.MvvmHelpers/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3902,6 +3920,15 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Refractored.MvvmHelpers/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -5640,6 +5667,15 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Refractored.MvvmHelpers/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -7384,6 +7420,15 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Refractored.MvvmHelpers/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        }
+      },
       "System.AppContext/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -9122,6 +9167,15 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Refractored.MvvmHelpers/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -10864,6 +10918,15 @@
         },
         "runtime": {
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Refractored.MvvmHelpers/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -12977,6 +13040,18 @@
         "ref/net46/Microsoft.Win32.Primitives.dll",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "Refractored.MvvmHelpers/1.2.2": {
+      "sha512": "FqppVTRwJ8b3OizGll6AkQqzqu5zUDmbULuiu5icBu4U5Dw9yHEok+PGe6BmH32Q87M1YzkOAl3CIIe4hdyd5w==",
+      "type": "package",
+      "path": "Refractored.MvvmHelpers/1.2.2",
+      "files": [
+        "Refractored.MvvmHelpers.1.2.2.nupkg.sha512",
+        "Refractored.MvvmHelpers.nuspec",
+        "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.dll",
+        "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.pdb",
+        "lib/portable-net45+wp80+win8+wpa81/MvvmHelpers.xml"
       ]
     },
     "System.AppContext/4.0.0": {
@@ -15784,6 +15859,7 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
+      "Refractored.MvvmHelpers >= 1.2.2",
       "Xamarin.Forms >= 2.3.0.49"
     ],
     "UAP,Version=v10.0": []

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPGDiceRoller.View.DiceView">
+  
+  <StackLayout Padding="10">
+    <Label Text="Dice Roller"/>
+    <StackLayout Orientation="Horizontal" Spacing="10">
+    <Button Text="d4" x:Name="D4Button" Command="{Binding RollD4Command}"></Button>
+    <Button Text="d6" x:Name="D6Button" Command="{Binding RollD6Command}"></Button>
+    <Button Text="d8" x:Name="D8Button" Command="{Binding RollD8Command}"></Button>
+    <Button Text="d10" x:Name="D10Button" Command="{Binding RollD10Command}"></Button>
+    <Button Text="d12" x:Name="D12Button" Command="{Binding RollD12Command}"></Button>
+    <Button Text="d20" x:Name="D20Button" Command="{Binding RollD20Command}"></Button>
+    <Button Text="d100" x:Name="D100Button" Command="{Binding RollD100Command}"></Button>
+      </StackLayout>
+    <Label Text="{Binding LatestRoll}"></Label>
+    <Label Text="---------- LOG ----------"></Label>
+    <ListView ItemsSource="{Binding Rolls}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout>
+              <Label Text="{Binding SidesCount, StringFormat='d{0}'}"></Label>
+            <Label Text="{Binding Roll}"></Label>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

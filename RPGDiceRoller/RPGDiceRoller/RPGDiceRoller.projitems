@@ -10,5 +10,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Rolls.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\DiceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\DiceView.xaml.cs">
+      <DependentUpon>DiceView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\DiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

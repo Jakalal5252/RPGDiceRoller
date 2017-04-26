@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPGDiceRoller.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,18 +12,9 @@ namespace RPGDiceRoller
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							HorizontalTextAlignment = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
+            // The root page of your application
+            MainPage = new NavigationPage(new DiceView())
+            { };
 		}
 
 		protected override void OnStart ()

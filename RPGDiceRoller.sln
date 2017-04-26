@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGDiceRoller.UWP", "RPGDic
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		RPGDiceRoller\RPGDiceRoller\RPGDiceRoller.projitems*{58793575-ecf0-4636-bbe4-c7df404a1e90}*SharedItemsImports = 4
 		RPGDiceRoller\RPGDiceRoller\RPGDiceRoller.projitems*{72ce1b15-fa1b-45ac-ba4d-5d6969d37a93}*SharedItemsImports = 13
 		RPGDiceRoller\RPGDiceRoller\RPGDiceRoller.projitems*{858f288e-b3d6-4528-a1c5-efef1fedd3dd}*SharedItemsImports = 4
 		RPGDiceRoller\RPGDiceRoller\RPGDiceRoller.projitems*{b21290ae-9987-4d51-b9f5-180540f2ef22}*SharedItemsImports = 4
@@ -185,6 +186,8 @@ Global
 		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.AppStore|x86.Build.0 = Release|x86
 		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.AppStore|x86.Deploy.0 = Release|x86
 		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.Debug|Any CPU.Build.0 = Debug|x86
+		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.Debug|ARM.ActiveCfg = Debug|ARM
 		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.Debug|ARM.Build.0 = Debug|ARM
 		{58793575-ECF0-4636-BBE4-C7DF404A1E90}.Debug|ARM.Deploy.0 = Debug|ARM
