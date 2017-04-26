@@ -114,7 +114,7 @@
         <DataTemplate>
           <ViewCell>
             <StackLayout Padding="8">
-              <Label Text="{Binding SidesCount, StringFormat='d{0}'}">
+              <Label Text="{Binding FullDiceName}">
                 <Label.FontFamily>
                   <OnPlatform x:TypeArguments="x:String">
                     <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>

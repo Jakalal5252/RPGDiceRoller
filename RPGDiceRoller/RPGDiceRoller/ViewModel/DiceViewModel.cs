@@ -77,8 +77,13 @@ namespace RPGDiceRoller.ViewModel
             try
             {
                 int sideCount = Convert.ToInt32(sideCountString);
-                LatestRoll = random.Next(1, sideCount + 1);
-                Rolls.Insert(0, new Rolls(sideCount, LatestRoll));
+                int total = 0;
+                for(int i = 0; i<numDice; i++)
+                {
+                    total+= random.Next(1, sideCount + 1);
+                }
+                LatestRoll = total;
+                Rolls.Insert(0, new Rolls(sideCount, LatestRoll, numDice));
             }
             catch (FormatException e)
             {
