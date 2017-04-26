@@ -19,8 +19,12 @@ namespace RPGDiceRoller.ViewModel
         public Command PlusNumDiceCommand { get; set; }
         private Random random = new Random();
         private int numDice = 1;
+        private int latestRoll = 0;
         private ObservableCollection<Rolls> rolls = new ObservableCollection<Rolls>();
 
+        /// <summary>
+        /// Constructor for DiceViewModel
+        /// </summary>
         public DiceViewModel()
         {
             RollDieCommand = new Command<string>(async (x) => await RollDie(x));
@@ -28,15 +32,6 @@ namespace RPGDiceRoller.ViewModel
             PlusNumDiceCommand = new Command(PlusNumDice);
         }
 
-        private void PlusNumDice(object obj)
-        {
-            NumDice += 1;
-        }
-
-        private void MinusNumDice()
-        {
-            NumDice -= 1;
-        }
 
         public ObservableCollection<Rolls> Rolls
 
@@ -48,6 +43,10 @@ namespace RPGDiceRoller.ViewModel
                 OnPropertyChanged();
             }
         }
+
+        /// <summary>
+        /// The number of dice currently in the dice pool
+        /// </summary>
         public int NumDice
         {
             get { return numDice; }
@@ -58,9 +57,25 @@ namespace RPGDiceRoller.ViewModel
             }
         }
 
-        
+        /// <summary>
+        /// Adds dice to the dice pool
+        /// </summary>
+        private void PlusNumDice()
+        {
+            NumDice += 1;
+        }
 
-        int latestRoll;
+        /// <summary>
+        /// Subtracts a dice from the dice pool
+        /// </summary>
+        private void MinusNumDice()
+        {
+            NumDice -= 1;
+        }
+
+        /// <summary>
+        /// The newest total of rolled dice
+        /// </summary>
         public int LatestRoll
         {
             get { return latestRoll; }
@@ -71,7 +86,11 @@ namespace RPGDiceRoller.ViewModel
             }
         }
 
-        
+        /// <summary>
+        /// Attempts to get the type of dice to be rolled. Rolls the current dice pool.
+        /// </summary>
+        /// <param name="sideCountString">String coorisopnding to the die image that was clicked.</param>
+        /// <returns></returns>
         async Task RollDie(string sideCountString)
         {
             try
