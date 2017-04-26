@@ -127,6 +127,16 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Drawable\d10.png" />
+    <Content Include="Resources\Drawable\d100.png" />
+    <Content Include="Resources\Drawable\d12.png" />
+    <Content Include="Resources\Drawable\d20.png" />
+    <Content Include="Resources\Drawable\d4.png" />
+    <Content Include="Resources\Drawable\d6.png" />
+    <Content Include="Resources\Drawable\d8.png" />
+    <AndroidResource Include="Resources\Drawable\Line.png" />
+  </ItemGroup>
   <Import Project="..\RPGDiceRoller\RPGDiceRoller.projitems" Label="Shared" Condition="Exists('..\RPGDiceRoller\RPGDiceRoller.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

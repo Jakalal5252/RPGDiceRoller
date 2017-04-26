@@ -66,32 +66,32 @@ namespace RPGDiceRoller.ViewModel
         async Task RollD6()
         {
             LatestRoll = random.Next(1, 7);
-            Rolls.Add(new Rolls(6, LatestRoll));
+            Rolls.Insert(0, new Rolls(6, LatestRoll));
         }
         async Task RollD8()
         {
             LatestRoll = random.Next(1, 9);
-            Rolls.Add(new Rolls(8, LatestRoll));
+            Rolls.Insert(0, new Rolls(8, LatestRoll));
         }
         async Task RollD10()
         {
             LatestRoll = random.Next(1, 11);
-            Rolls.Add(new Rolls(10, LatestRoll));
+            Rolls.Insert(0, new Rolls(10, LatestRoll));
         }
         async Task RollD12()
         {
             LatestRoll = random.Next(1, 13);
-            Rolls.Add(new Rolls(12, LatestRoll));
+            Rolls.Insert(0, new Rolls(12, LatestRoll));
         }
         async Task RollD20()
         {
             LatestRoll = random.Next(1, 21);
-            Rolls.Add(new Rolls(20, LatestRoll));
+            Rolls.Insert(0, new Rolls(20, LatestRoll));
         }
         async Task RollD100()
         {
             LatestRoll = random.Next(1, 101);
-            Rolls.Add(new Rolls(100, LatestRoll));
+            Rolls.Insert(0, new Rolls(100, LatestRoll));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

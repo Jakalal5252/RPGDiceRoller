@@ -141,6 +141,15 @@
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\d10.png" />
+    <Content Include="Resources\d100.png" />
+    <Content Include="Resources\d12.png" />
+    <Content Include="Resources\d20.png" />
+    <Content Include="Resources\d4.png" />
+    <Content Include="Resources\d6.png" />
+    <Content Include="Resources\d8.png" />
+  </ItemGroup>
   <Import Project="..\RPGDiceRoller\RPGDiceRoller.projitems" Label="Shared" Condition="Exists('..\RPGDiceRoller\RPGDiceRoller.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
