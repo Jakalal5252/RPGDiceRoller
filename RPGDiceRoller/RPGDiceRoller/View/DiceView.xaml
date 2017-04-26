@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RPGDiceRoller.View.DiceView">
 
+  <!-- Title/Instructions -->
   <StackLayout Padding="10">
     <Label Text="Tap to roll" Font="BellMT" FontSize="24" HorizontalOptions="LayoutOptions.Center">
       <Label.FontFamily>
@@ -13,27 +14,32 @@
         </OnPlatform>
       </Label.FontFamily>
     </Label>
-    
+
+    <!-- Dice Pictures -->
     <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="LayoutOptions.Center">
       <Image Source="d4.png"
              WidthRequest="100"
              HeightRequest="100">
         <Image.GestureRecognizers>
-          <TapGestureRecognizer  Command="{Binding RollD4Command}"/>
+          <TapGestureRecognizer
+            Command="{Binding RollDieCommand}"
+            CommandParameter="4"/>
         </Image.GestureRecognizers>
       </Image>
       <Image Source="d6.png"
              WidthRequest="100"
              HeightRequest="100">
         <Image.GestureRecognizers>
-          <TapGestureRecognizer  Command="{Binding RollD6Command}"/>
+          <TapGestureRecognizer  Command="{Binding RollDieCommand}"
+            CommandParameter="6"/>
         </Image.GestureRecognizers>
       </Image>
       <Image Source="d8.png"
            WidthRequest="100"
            HeightRequest="100">
         <Image.GestureRecognizers>
-          <TapGestureRecognizer  Command="{Binding RollD8Command}"/>
+          <TapGestureRecognizer  Command="{Binding RollDieCommand}"
+            CommandParameter="8"/>
         </Image.GestureRecognizers>
       </Image>
     </StackLayout>
@@ -42,31 +48,55 @@
              WidthRequest="100"
              HeightRequest="100">
         <Image.GestureRecognizers>
-          <TapGestureRecognizer  Command="{Binding RollD10Command}"/>
+          <TapGestureRecognizer Command="{Binding RollDieCommand}"
+            CommandParameter="10"/>
         </Image.GestureRecognizers>
       </Image>
       <Image Source="d12.png"
              WidthRequest="100"
              HeightRequest="100">
         <Image.GestureRecognizers>
-          <TapGestureRecognizer  Command="{Binding RollD12Command}"/>
+          <TapGestureRecognizer Command="{Binding RollDieCommand}"
+            CommandParameter="12"/>
         </Image.GestureRecognizers>
       </Image>
       <Image Source="d20.png"
            WidthRequest="100"
            HeightRequest="100">
         <Image.GestureRecognizers>
-          <TapGestureRecognizer  Command="{Binding RollD20Command}"/>
+          <TapGestureRecognizer  Command="{Binding RollDieCommand}"
+            CommandParameter="20"/>
         </Image.GestureRecognizers>
       </Image>
       <Image Source="d100.png"
            WidthRequest="100"
            HeightRequest="100">
         <Image.GestureRecognizers>
-          <TapGestureRecognizer  Command="{Binding RollD100Command}"/>
+          <TapGestureRecognizer  Command="{Binding RollDieCommand}"
+            CommandParameter="100"/>
         </Image.GestureRecognizers>
       </Image>
     </StackLayout>
+
+    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="LayoutOptions.Center">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="75" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Column="0" WidthRequest="30" HorizontalOptions="Fill" VerticalOptions="Fill" Text="-" Command="{Binding MinusNumDiceCommand}" BackgroundColor="Gray"></Button>
+        <Entry Grid.Column="1" VerticalOptions="Fill"  Text="{Binding NumDice, Mode=TwoWay}"></Entry>
+        <Button Grid.Column="2" WidthRequest="30" HorizontalOptions="Fill" VerticalOptions="Fill" Text="+" Command="{Binding PlusNumDiceCommand}" BackgroundColor="Gray"></Button>
+      </Grid>
+
+    </StackLayout>
+
+    <!-- Results -->
     <Label Text="{Binding LatestRoll, StringFormat='Latest Roll: {0}'}" HorizontalOptions="LayoutOptions.Center">
       <Label.FontFamily>
         <OnPlatform x:TypeArguments="x:String">
@@ -76,6 +106,8 @@
         </OnPlatform>
       </Label.FontFamily>
     </Label>
+
+    <!-- Log -->
     <Image Source="line.png" HorizontalOptions="LayoutOptions.Center"></Image>
     <ListView ItemsSource="{Binding Rolls}">
       <ListView.ItemTemplate>
@@ -84,21 +116,21 @@
             <StackLayout Padding="8">
               <Label Text="{Binding SidesCount, StringFormat='d{0}'}">
                 <Label.FontFamily>
-        <OnPlatform x:TypeArguments="x:String">
-          <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
-          <OnPlatform.Android>Droid Sans Mono</OnPlatform.Android>
-          <OnPlatform.WinPhone>Segoe Print</OnPlatform.WinPhone>
-        </OnPlatform>
-      </Label.FontFamily>
+                  <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
+                    <OnPlatform.Android>Droid Sans Mono</OnPlatform.Android>
+                    <OnPlatform.WinPhone>Segoe Print</OnPlatform.WinPhone>
+                  </OnPlatform>
+                </Label.FontFamily>
               </Label>
               <Label Text="{Binding Roll}">
                 <Label.FontFamily>
-        <OnPlatform x:TypeArguments="x:String">
-          <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
-          <OnPlatform.Android>Droid Sans Mono</OnPlatform.Android>
-          <OnPlatform.WinPhone>Segoe Print</OnPlatform.WinPhone>
-        </OnPlatform>
-      </Label.FontFamily>
+                  <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.iOS>MarkerFelt-Thin</OnPlatform.iOS>
+                    <OnPlatform.Android>Droid Sans Mono</OnPlatform.Android>
+                    <OnPlatform.WinPhone>Segoe Print</OnPlatform.WinPhone>
+                  </OnPlatform>
+                </Label.FontFamily>
               </Label>
             </StackLayout>
           </ViewCell>
